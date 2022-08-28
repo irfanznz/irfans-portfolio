@@ -10,20 +10,47 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
 p {
 	font-family: "Jost", sans-serif;
 	font-size: 1.1rem;
+	font-weight: 300;
 	margin: 0 0 0.1rem 0 !important;
 }
 
-body {
+/* body {
 	background-color: var(--off-white) !important;
+} */
+
+#about {
+	background-color: var(--off-white) !important;
+	z-index: 0;
+}
+
+#projects {
+	background-color: var(--pale-lavender) !important;
+	z-index: 1;
+}
+
+#skills {
+	background-color: var(--silver-pink) !important;
+	z-index: 2;
 }
 
 .banner {
 	width: 100%;
 	height: 100vh;
 	background-color: var(--dark-liver);
+	z-index: 10;
 }
 
 .banner-text {
@@ -34,14 +61,14 @@ body {
 }
 
 .section-title {
-	bottom: -1%;
+	bottom: -3%;
 	left: 12px;
-	height: 15%;
+	height: 25vh;
 	z-index: -1;
 }
 
-#projects-section {
-	bottom: 7px;
+#projects-title {
+	bottom: 1%;
 }
 
 .spacer {
@@ -49,11 +76,41 @@ body {
 }
 
 .title-spacer {
-	height: 15vh;
+	height: 25vh;
 }
 
 @media (max-width: 767px) {
 	.spacer {
 		height: 0;
 	}
+}
+
+.frame {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.path1 {
+	top: -20%;
+	left: -5%;
+	width: 220%;
+}
+
+#cornell-logo {
+	top: 5%;
+	left: -0;
+	width: 7rem;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+	width: 100%;
+	height: fit-content;
+	background-color: white;
+	border-radius: 2rem 2rem 2rem 2rem;
 }
