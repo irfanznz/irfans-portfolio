@@ -23,7 +23,7 @@ img {
 p {
 	font-family: "Jost", sans-serif;
 	font-size: 1.1rem;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0 0 0.1rem 0 !important;
 }
 
@@ -32,7 +32,7 @@ p {
 } */
 
 #about {
-	background-color: var(--off-white) !important;
+	background-color: white !important;
 	z-index: 0;
 }
 
@@ -100,10 +100,10 @@ p {
 	width: 220%;
 }
 
-#cornell-logo {
-	top: 5%;
-	left: -0;
-	width: 7rem;
+/* TEXT SECTIONS */
+
+.text-container {
+	border: 1px solid #262626;
 }
 
 /* PROJECT CARD */
