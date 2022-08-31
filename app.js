@@ -17,6 +17,18 @@ for (let i = 0; i < section_titles.length; i++) {
 	);
 }
 
+// BANNER ANIMATIONS
+
+ScrollTrigger.create({
+	markers: true,
+	trigger: "#banner",
+	start: "top top",
+	end: "+=100%",
+	pin: true,
+});
+
+// TITLE ANIMATIONS
+
 ScrollTrigger.defaults({
 	markers: false,
 });
@@ -35,15 +47,15 @@ for (let i = 0; i < about_letters.length; i++) {
 		"stroke-dashoffset": 0,
 	});
 
-	// gsap.to(about_letters[i], {
-	// 	scrollTrigger: {
-	// 		id: "about_fade",
-	// 		trigger: "#about",
-	// 		toggleActions: "play none none reverse",
-	// 		start: "60% bottom",
-	// 	},
-	// 	fill: "#262626",
-	// });
+	gsap.to(about_letters[i], {
+		scrollTrigger: {
+			id: "about_fade",
+			trigger: "#about",
+			toggleActions: "play none none reverse",
+			start: "60% bottom",
+		},
+		fill: "white",
+	});
 }
 
 projects_letters = document.querySelectorAll("#projects-title path");
@@ -60,15 +72,15 @@ for (let i = 0; i < projects_letters.length; i++) {
 		"stroke-dashoffset": 0,
 	});
 
-	// gsap.to(projects_letters[i], {
-	// 	scrollTrigger: {
-	// 		id: "projects_fade",
-	// 		trigger: "#projects",
-	// 		toggleActions: "play none none reverse",
-	// 		start: "60% bottom",
-	// 	},
-	// 	fill: "#474554",
-	// });
+	gsap.to(projects_letters[i], {
+		scrollTrigger: {
+			id: "projects_fade",
+			trigger: "#projects",
+			toggleActions: "play none none reverse",
+			start: "60% bottom",
+		},
+		fill: "white",
+	});
 }
 
 // gsap.set("#cornell-logo", {
@@ -92,3 +104,51 @@ for (let i = 0; i < projects_letters.length; i++) {
 // 	},
 // 	scale: 5,
 // });
+
+// DOTS BACKGROUND MOTION
+
+gsap.to(document.getElementById("bg-dots"), {
+	scrollTrigger: {
+		trigger: "#about",
+		start: "top bottom",
+		end: "bottom top",
+		scrub: 0,
+	},
+	left: 0,
+	top: 0,
+});
+
+// WAVES BACKGROUND MOTION
+
+gsap.to(document.getElementById("bg-waves-1"), {
+	scrollTrigger: {
+		trigger: "#projects",
+		start: "top bottom",
+		end: "bottom top",
+		scrub: 0,
+	},
+	left: "0%",
+});
+
+gsap.to(document.getElementById("bg-waves-2"), {
+	scrollTrigger: {
+		trigger: "#projects",
+		start: "top bottom",
+		end: "bottom top",
+		scrub: 0,
+	},
+	left: "-10%",
+});
+
+// TEXTBOX MOTIONS
+
+for (let i = 1; i < 9; i++) {
+	gsap.from(document.getElementById(`abt-${i}`), {
+		scrollTrigger: {
+			trigger: `#abt-${i}`,
+			start: "top 80%",
+			duration: 5,
+		},
+		left: i == 2 || i == 5 ? "-10%" : "10%",
+	});
+}
