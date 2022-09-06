@@ -125,7 +125,7 @@ gsap.to(document.getElementById("bg-waves-1"), {
 		trigger: "#projects",
 		start: "top bottom",
 		end: "bottom top",
-		scrub: 0,
+		scrub: 1,
 	},
 	left: "0%",
 });
@@ -135,7 +135,7 @@ gsap.to(document.getElementById("bg-waves-2"), {
 		trigger: "#projects",
 		start: "top bottom",
 		end: "bottom top",
-		scrub: 0,
+		scrub: 1,
 	},
 	left: "-10%",
 });
